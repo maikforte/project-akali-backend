@@ -6,7 +6,8 @@ const config = {
         'asia',
         'europe',
         'sea',
-    ]
+    ],
+    locale: 'en_us'
 };
 
 module.exports = config;
