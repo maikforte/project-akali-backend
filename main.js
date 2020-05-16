@@ -16,9 +16,11 @@ app.use((req, res, next) => {
 
 // App Components
 const helloWorld = require('./app/hello-world')();
+const leaderboards = require('./app/leaderboards')();
 
 // Routes
 app.use(helloWorld);
+app.use(leaderboards);
 
 app.listen(config.port, () => {
     console.log(`Listening on port: ${config.port}...`);
