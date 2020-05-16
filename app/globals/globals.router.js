@@ -15,9 +15,7 @@ module.exports = (route, controller) => {
             res.send(rarities);
         })
         .get('/regions', async (req, res) => {
-            console.log('test');
             const rarities = controller.getRegions();
-            console.log('rarities');
             res.send(rarities);
         })
         .get('/spell-speeds', async (req, res) => {
