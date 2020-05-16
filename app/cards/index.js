@@ -1,9 +1,10 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const axios = require('axios');
+const alasql = require('alasql');
+const config = require('../../config/config');
 
-const controller = require('./hello-world.controller')(axios);
-const router = require('./hello-world.router');
+const controller = require('./cards.controller')(config, alasql);
+const router = require('./cards.router');
 
 module.exports = () => {
     const route = express.Router();

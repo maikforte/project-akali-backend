@@ -17,15 +17,16 @@ app.use((req, res, next) => {
 });
 
 // App Components
-const helloWorld = require('./app/hello-world')();
 const leaderboards = require('./app/leaderboards')();
 const globals = require('./app/globals')();
+const cards = require('./app/cards')();
 
 // Routes
-app.use(helloWorld);
 app.use(leaderboards);
 app.use(globals);
+app.use(cards);
 
+// Spin-up Server
 app.listen(config.port, () => {
     console.log(`Listening on port: ${config.port}...`);
 });

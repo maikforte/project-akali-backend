@@ -12,6 +12,7 @@
   "author": "Michael 'Maik' Ardan",
   "license": "Apache-2.0",
   "dependencies": {
+    "alasql": "^0.6.0",
     "axios": "^0.19.2",
     "body-parser": "^1.18.3",
     "dotenv": "^8.2.0",
