@@ -1,15 +1,56 @@
 # Project SLEX
 
 ## Table of Contents
-1. [What the hell?](#what-the-hell)
+1. [Endpoints](#endpoints)
+    - [Leaderboards](#get-/leaderboards/:region)
+    - [Rarities](#get-/globals/rarities)
+    - [Card Regions](#get-/globals/regions)
+    - [Spell Speeds](#get-/globals/spell-speeds)
+    - [Vocabulary Terms](#get-/globals/vocab-terms)
+    - [Keywords](#get-/globals/keywords)
+    - [Cards](#get-/cards)
 1. [Testing](#testing)
 1. [Linting](#linting)
 1. [Quickstart](#quickstart)
 
-### What the hell?
-Okay, I'm tired of re-creating new ExpressJS back-end over and over again when working on a project.
+### Endpoints
+#### `GET /leaderboards/:region`
+> List of LoR masters per region
 
-It's called SLEX because the project is Express... JS.... He he he.
+*Available Regions*:
+- americas
+- asia
+- europe
+- sea
+
+#### `GET /globals/rarities`
+> List of currently available card rarities
+
+#### `GET /globals/regions`
+> List of currently available card regions
+
+#### `GET /globals/spell-speeds`
+> List of currently available Spell Speeds
+
+#### `GET /globals/vocab-terms`
+> List of vocabulary terms
+
+#### `GET /globals/keywords`
+> List of keywords
+
+#### `GET /cards`
+> List all available cards
+
+*Pagination*:<br>
+Each page contains 25 cards
+
+*Example*:<br>
+`GET /cards?page=1`
+
+The endpoint also accepts query as long as it is a card property. I recommend that you use the nameRef as is it widely used and is not affected by different locale. Pagination is also accepted when querying with property.
+
+*Example*:<br>
+`GET /cards?regionRef=Ionia&attack=0&page=1`
 
 ### Testing
 Unit testing is very very simple. The project uses [Mocha](https://mochajs.org/) - a very very simple and lightweight test framework that runs on Node and browser. [Chai](https://mochajs.org/) - for the assertion library
