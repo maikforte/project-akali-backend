@@ -68,4 +68,4 @@ To fix some of the linting errors, run `npm run lint-fix`
 1. Navigate to the project folder
 1. Run `npm install`
 1. Run `npm start`
-1. Open your browser to `http://localhost:3000/hello-world` or `http://localhost:3000/hello-world/Michael`
+1. Open your browser to `http://localhost:3000/leaderboards/asia` or `http://localhost:3000/globals/rarities`
