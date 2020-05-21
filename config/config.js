@@ -8,7 +8,7 @@ const config = {
         'sea',
     ],
     locale: 'en_us',
-    pageLimit: 25,
+    pageLimit: 10,
 };
 
 module.exports = config;

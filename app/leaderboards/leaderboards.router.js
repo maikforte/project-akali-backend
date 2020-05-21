@@ -16,7 +16,7 @@ module.exports = (route, controller) => {
             try {
                 response = await controller.getLeaderboards(region);
                 if (response.status === 200) {
-                    res.status(500);
+                    res.status(200);
                     res.send(response.data.players);
                 } else {
                     res.status(response.status);

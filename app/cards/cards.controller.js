@@ -50,7 +50,7 @@ module.exports = (config, alasql) => {
         const whereClause = createWhereClause(params);
         const pagination = getPagination(page);
 
-        const cards = alasql(`SELECT * FROM ? ${whereClause} ${pagination}`, [CARDS]);
+        const cards = alasql(`SELECT * FROM ? ${whereClause} ORDER BY cost DESC ${pagination}`, [CARDS]);
 
         return cards;
     };
