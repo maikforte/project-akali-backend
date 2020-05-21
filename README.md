@@ -1,4 +1,4 @@
-# Project SLEX
+# Project Akali
 
 ## Table of Contents
 1. [Endpoints](#endpoints)
@@ -67,5 +67,5 @@ To fix some of the linting errors, run `npm run lint-fix`
 1. Fork the repo
 1. Navigate to the project folder
 1. Run `npm install`
-1. Run `npm start`
+1. Run `npm run develop`
 1. Open your browser to `http://localhost:3000/leaderboards/asia` or `http://localhost:3000/globals/rarities`
