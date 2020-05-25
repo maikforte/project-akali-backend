@@ -50,7 +50,14 @@ Each page contains 25 cards
 The endpoint also accepts query as long as it is a card property. I recommend that you use the nameRef as is it widely used and is not affected by different locale. Pagination is also accepted when querying with property.
 
 *Example*:<br>
+1. Get paginated Ionia Cards with attack = 0<br>
 `GET /cards?regionRef=Ionia&attack=0&page=1`
+
+1. Get ALL Ionia Cards<br>
+`GET /cards?regionRef=Ionia`
+
+1. Get Cards with cost = 3
+`GET /cards?cost=3`
 
 ### Testing
 Unit testing is very very simple. The project uses [Mocha](https://mochajs.org/) - a very very simple and lightweight test framework that runs on Node and browser. [Chai](https://mochajs.org/) - for the assertion library
@@ -66,6 +73,7 @@ To fix some of the linting errors, run `npm run lint-fix`
 ### Quickstart
 1. Fork the repo
 1. Navigate to the project folder
+1. Create `.env` file with `RIOT_API_KEY=<YOUR_RIOT_API_KEY>`
 1. Run `npm install`
 1. Run `npm run develop`
 1. Open your browser to `http://localhost:3000/leaderboards/asia` or `http://localhost:3000/globals/rarities`
